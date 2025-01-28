@@ -26,6 +26,7 @@ open terminal in project directory
 source env/Scripts/activate
 
 --------------------------------------------------------------- PACKAGE INSTALLS ---------------------------------------------------------------
+
 once the virtual environemnt is set up run:
 
 pip install
