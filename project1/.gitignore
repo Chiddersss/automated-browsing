@@ -1,0 +1,6 @@
+# Ignore all packages and environment files
+env
+include
+lib
+scripts
+pyvenv.cfg
