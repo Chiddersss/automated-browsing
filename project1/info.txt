@@ -1,0 +1,24 @@
+common searches for bonus points:
+
+Search bing to find items on shopping list
+Search bing for upcoming weather
+Search the latest stock market
+Search a sports game result
+Search a video game and learn more about it 
+Search to direct you to your next adventure
+
+WORDS TO SEARCH ON WEBPAGE
+
+"Learn the facts"
+"Explore now"
+"Search now"
+"Check the latest forcast"
+"Look into it now" - STOCK MARKET
+"Find the score" - SPORTS GAME
+"Search and play now" - VIDEO GAME
+"Search for directions - Search to direct you to your next adventure
+"Start shopping" - Search bing to find items on shopping list
+
+"5 points >"
+"10 points >"
+"30 points >"

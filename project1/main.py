@@ -7,7 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from datetime import datetime
 import time
 
-searches = [
+searchesUni = [
     "University of Aberdeen",
     "University of Edinburgh",
     "University of Glasgow",
@@ -68,8 +68,8 @@ current_time = datetime.now()
 
 print("current time: ", current_time)
 # ------------------------------------------------ searching script function ------------------------------------------------
-def searchInput():         
-    for search in searches:
+def searchInput():       
+    for search in searchesUni:
         print("Searching for: " + search)
         search_box = driver.find_element(By.NAME, "q")
         search_box.clear()
