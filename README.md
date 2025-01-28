@@ -19,3 +19,7 @@ MAC/LINUX/UNIX - BASH:
 open terminal in project directory 
 
 source env/Scripts/activate
+
+once the virtual environemnt is set up run:
+
+pip install
