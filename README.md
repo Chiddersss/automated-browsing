@@ -11,9 +11,11 @@ cd into project location
 
 ex. "C:\Users\<youruser>\Desktop\automated browsing(2)\project1"
 
+
 .\env\Scripts\Activate.ps1
 
 MAC/LINUX/UNIX - BASH:
+
 open terminal in project directory 
 
 source env/Scripts/activate
