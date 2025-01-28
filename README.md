@@ -8,6 +8,7 @@ https://developer.microsoft.com/en-gb/microsoft-edge/tools/webdriver/?cs=5780625
 TO ACTIVATE PYTHON VIRTUAL ENVIRONMENT:
 
 --------------------------------------------------------------- WINDOWS ---------------------------------------------------------------
+
 FOR WINDOWS POWERSHELL:
 
 cd into project location
