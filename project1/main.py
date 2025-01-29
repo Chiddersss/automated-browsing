@@ -71,7 +71,7 @@ print("current time: ", current_time)
 def searchInput():       
     for search in searchesUni:
         print("Searching for: " + search)
-        search_box = driver.find_element(By.NAME, "q")
+        search_box = driver.find_element(By.NAME, "q") #change the way to find search box as a lot of elements are called "q"
         search_box.clear()
         search_box.send_keys(search)
         search_box.send_keys(Keys.RETURN)
