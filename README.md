@@ -22,7 +22,8 @@ FOR WINDOWS POWERSHELL:
 
 cd into project location
 
-> ex. "C:\Users\<youruser>\Desktop\automated browsing(2)\project1"
+ex.
+> "C:\Users\<youruser>\Desktop\automated browsing(2)\project1"
 
 > .\env\Scripts\Activate.ps1
 
