@@ -4,6 +4,16 @@ Select Stable Channel:
 
 https://developer.microsoft.com/en-gb/microsoft-edge/tools/webdriver/?cs=578062562&form=MA13LH
 
+--------------------------------------------------------------- HOW TO SET UP A VIRTUAL ENV ---------------------------------------------------------------
+pip install virtualenv
+
+python<version> -m venv <virtual-environment-name>
+
+ex. 
+1 mkdir projectA 
+2 cd projectA
+3 python3.11 -m venv env
+
 -----------------------------------------------------------------------------------------------------------------
 TO ACTIVATE PYTHON VIRTUAL ENVIRONMENT:
 
