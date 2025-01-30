@@ -55,6 +55,16 @@ searchesUni = [
     "University of Aberdeen"
 ]
 
+RewardsPageElements = [
+    "30 points >",
+    "10 points>",
+    "5 points >",
+    "Learn the facts",
+    "Explore now",
+    "Search now",
+    "Check the latest forcast"
+]
+
 # ------------------------------------------------ testing a for loop to iterate through the array ------------------------------------------------
 # def printThroughArray():
 #     for search in searches:
@@ -78,18 +88,36 @@ def searchInput():
             search_box.clear()
             search_box.send_keys(search)
             search_box.send_keys(Keys.RETURN)
-            search_box.send_keys(Keys.PAGE_DOWN)                       #this makes it run really fast for some reason - not what i intended but `¯\_(ツ)_/¯`
+            time.sleep(2)
+            search_box.send_keys(Keys.PAGE_DOWN)                     # `¯\_(ツ)_/¯`
             time.sleep(5)
         except Exception as e:
             print(f"An error occurred: {e}")
 
+# ------------------------------------------------ rewards page function ------------------------------------------------
+def rewardsPage():
+  for element in RewardsPageElements:
+      print("Finding element: " + element)
+      try:
+          click_element = WebDriverWait(driver, 10).until(
+                EC.presence_of_element_loacted((By.LINK_TEXT, element))
+          )
+          click_element.click()
+      except Exception as e:
+            print(f"An error occurred: {e}")
+
 driver = webdriver.Edge()
 
-# inputting searches into bing
+# ------------------------------------------------ inputting searches into bing ------------------------------------------------
 print("Navigating to Bing")
 driver.get("https://www.bing.com")  
 
 searchInput()
+
+print("Navigating to Microsoft Rewards")
+driver.get("https://rewards.bing.com/?signin=1&FORM=WSBREW&cvid=b62d7f12ed2b4fcab824e14d9e17ca52&ref=WSB")
+
+rewardsPage()
 
 # ------------------------------------------------ Microsoft Rewards script --------------------------------------------------------------------------
 #def():
