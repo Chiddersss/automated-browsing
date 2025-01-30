@@ -68,15 +68,20 @@ current_time = datetime.now()
 
 print("current time: ", current_time)
 # ------------------------------------------------ searching script function ------------------------------------------------
-def searchInput():       
+def searchInput():
     for search in searchesUni:
         print("Searching for: " + search)
-        search_box = driver.find_element(By.NAME, "q") #change the way to find search box as a lot of elements are called "q"
-        search_box.clear()
-        search_box.send_keys(search)
-        search_box.send_keys(Keys.RETURN)
-        time.sleep(5)
-
+        try:
+            search_box = WebDriverWait(driver, 10).until(
+                EC.presence_of_element_located((By.NAME, "q"))
+            )
+            search_box.clear()
+            search_box.send_keys(search)
+            search_box.send_keys(Keys.RETURN)
+            search_box.send_keys(Keys.PAGE_DOWN)                       #this makes it run really fast for some reason - not what i intended but `¯\_(ツ)_/¯`
+            time.sleep(5)
+        except Exception as e:
+            print(f"An error occurred: {e}")
 
 driver = webdriver.Edge()
 
