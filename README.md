@@ -14,7 +14,7 @@ ex.
 > cd projectA
 > python3.11 -m venv env
 
-### TO ACTIVATE PYTHON VIRTUAL ENVIRONMENT:
+### <ins> TO ACTIVATE PYTHON VIRTUAL ENVIRONMENT: </ins>
 
 ### WINDOWS
 
