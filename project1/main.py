@@ -67,7 +67,6 @@ searchesUni = [
 ]
 
 # same with this one
-# same with this one
 RewardsPageElements = [
     "30 points >",
     "10 points>",
@@ -129,7 +128,6 @@ driver.get("https://www.bing.com")
 
 searchInput()
 
-# automatting the clicks on the rewards page
 # automatting the clicks on the rewards page
 print("Navigating to Microsoft Rewards")
 driver.get("https://rewards.bing.com/?signin=1&FORM=WSBREW&cvid=b62d7f12ed2b4fcab824e14d9e17ca52&ref=WSB")
