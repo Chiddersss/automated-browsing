@@ -136,12 +136,6 @@ driver.get("https://rewards.bing.com/?signin=1&FORM=WSBREW&cvid=b62d7f12ed2b4fca
 
 rewardsPage()
 
-# ------------------------------------------------ Microsoft Rewards script --------------------------------------------------------------------------
-#def():
-
-# print("Navigating the Microsoft Rewards...")
-# driver.get("https://rewards.bing.com/?signin=1&FORM=WSBREW&cvid=b62d7f12ed2b4fcab824e14d9e17ca52&ref=WSB")
-
 # ------------------------------------------------------------------------------- ELEMENTS ------------------------------------------------
 # <div id="ma-card-link" class="actionLink ng-scope x-hidden-vp1" ng-class="{'x-hidden-vp1' : $ctrl.areaConfig.isMobileViewModeEnabled}" ng-hide="$ctrl.isDenseDashboard()" ng-if="item.exclusiveLockedFeatureCardStatus != 'locked'">
         #     <span class="pointLink ng-binding">
