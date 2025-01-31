@@ -116,7 +116,6 @@ def rewardsPage():
           )
           click_element.click()
           time.sleep(2)
-          time.sleep(2)
       except Exception as e:
             print(f"An error occurred: {e}")
 
