@@ -12,7 +12,7 @@ https://developer.microsoft.com/en-gb/microsoft-edge/tools/webdriver/?cs=5780625
 ex. 
 > mkdir projectA 
 > cd projectA
-> python3.11 -m venv env
+> python3.13 -m venv env
 
 ### <ins> TO ACTIVATE PYTHON VIRTUAL ENVIRONMENT: </ins>
 
