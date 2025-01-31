@@ -6,7 +6,18 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from datetime import datetime
 import time
+import os
 
+# thoughts -- https://www.w3schools.com/python/python_dictionaries.asp
+
+json_file_path = os.path.join(os.path.dirname(__file__), 'searches-db', 'login.json')
+with open(json_file_path, 'r') as f:
+    login_data = json.load(f)
+    login_string = json.dumps(login_data)
+
+print(str(login_data))
+
+# will place into seperate file later on
 searchesUni = [
     "University of Aberdeen",
     "University of Edinburgh",
@@ -55,6 +66,7 @@ searchesUni = [
     "University of Aberdeen"
 ]
 
+# same with this one
 RewardsPageElements = [
     "30 points >",
     "10 points>",
@@ -103,6 +115,7 @@ def rewardsPage():
                 EC.presence_of_element_loacted((By.LINK_TEXT, element))
           )
           click_element.click()
+          time.sleep(2)
       except Exception as e:
             print(f"An error occurred: {e}")
 
@@ -114,6 +127,7 @@ driver.get("https://www.bing.com")
 
 searchInput()
 
+# automatting the clicks on the rewards page
 print("Navigating to Microsoft Rewards")
 driver.get("https://rewards.bing.com/?signin=1&FORM=WSBREW&cvid=b62d7f12ed2b4fcab824e14d9e17ca52&ref=WSB")
 
