@@ -100,7 +100,7 @@ def searchInput():
             search_box.clear()
             search_box.send_keys(search)
             search_box.send_keys(Keys.RETURN)
-            time.sleep(2)
+            # time.sleep(2)                         # -- without this is goes really fast on some computers
             search_box.send_keys(Keys.PAGE_DOWN)                     # `¯\_(ツ)_/¯`
             time.sleep(5)
         except Exception as e:
