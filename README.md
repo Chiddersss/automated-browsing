@@ -40,3 +40,5 @@ open terminal in project directory
 once the virtual environemnt is set up run:
 
 > pip install
+
+if missing import error shows - ignore it. it's just gaslighting you. it should still work 
