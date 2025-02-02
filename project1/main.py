@@ -10,14 +10,19 @@ import os
 
 # thoughts -- https://www.w3schools.com/python/python_dictionaries.asp
 
-json_file_path = os.path.join(os.path.dirname(__file__), 'searches-db', 'login.json')
-with open(json_file_path, 'r') as f:
-    login_data = json.load(f)
-    login_string = json.dumps(login_data)
+# Load the searches.json file from the searches-db folder
+# json_file_path = os.path.join(os.path.dirname(__file__), 'searches-db', 'searches.json')
+# with open(json_file_path, 'r') as file:
+#     data = json.load(file)
 
-print(str(login_data))
+# Example usage of the loaded JSON data
+# for university in data['universities']:
+#     print("uni_id", university['uni_id'])
+#     print(" ")
+#     print("uni_name", university['uni_name'])
 
 # will place into seperate file later on
+# bill microsoft has caught onto the universities being searched repeatedly now it doesn't generate points
 searchesUni = [
     "University of Aberdeen",
     "University of Edinburgh",
@@ -32,7 +37,7 @@ searchesUni = [
     "University of the West of England",
     "University of the Arts London",
     "University of the Creative Arts",
-    "University of the London",
+    "University of the London", #???
     "University of Central Lancashire",
     "University of East Anglia",
     "University of East London",
@@ -66,6 +71,30 @@ searchesUni = [
     "University of Aberdeen"
 ]
 
+gamesSearches = [
+    "ELDEN RING",
+    "Halo Infinite",
+    "Horizon Forbidden West",
+    "God of War Ragnarok",
+    "Starfield",
+    "The Legend of Zelda: Breath of the Wild 2",
+    "Final Fantasy XVI",
+    "Fable",
+    "The Elder Scrolls VI",
+    "Metroid Prime 4",
+    "Silent Hill",
+    "Age of Empires II",
+    "Bloons Tower Defense 6",
+    "Bloodborne",
+    "Call of Duty: Warzone",
+    "Cuphead",
+    "Dark Souls III",
+    "Dead by Daylight",
+    "Dead Space",
+    "Death Stranding",
+    "Demon's Souls"
+]
+
 # same with this one
 RewardsPageElements = [
     "30 points >",
@@ -79,7 +108,7 @@ RewardsPageElements = [
 
 # ------------------------------------------------ testing a for loop to iterate through the array ------------------------------------------------
 # def printThroughArray():
-#     for search in searches:
+#     for search in searchesUni:
 #         if (search == "University of Central Lancashire"):
 #             break
 #         print(search)
@@ -90,7 +119,7 @@ current_time = datetime.now()
 
 print("current time: ", current_time)
 # ------------------------------------------------ searching script function ------------------------------------------------
-def searchInput():
+def searchInputUni():
     for search in searchesUni:
         print("Searching for: " + search)
         try:
@@ -100,8 +129,25 @@ def searchInput():
             search_box.clear()
             search_box.send_keys(search)
             search_box.send_keys(Keys.RETURN)
-            time.sleep(2)
+            time.sleep(5)
             search_box.send_keys(Keys.PAGE_DOWN)                     # `¯\_(ツ)_/¯`
+            time.sleep(5)
+        except Exception as e:
+            print(f"An error occurred: {e}")
+
+# ------------------------------------------------ searching script function video games ------------------------------------------------
+def searchInputGames():
+    for search in gamesSearches:
+        print("Searching for: " + search)
+        try:
+            search_box = WebDriverWait(driver, 10).until(
+                EC.presence_of_element_located((By.NAME, "q"))
+            )
+            search_box.clear()
+            search_box.send_keys(search)
+            search_box.send_keys(Keys.RETURN)
+            time.sleep(5)                               #if it goes too fast microsoft servers can't keep up
+            search_box.send_keys(Keys.PAGE_DOWN)                    
             time.sleep(5)
         except Exception as e:
             print(f"An error occurred: {e}")
@@ -115,8 +161,7 @@ def rewardsPage():
                 EC.presence_of_element_loacted((By.LINK_TEXT, element))
           )
           click_element.click()
-          time.sleep(2)
-          time.sleep(2)
+          time.sleep(5)
       except Exception as e:
             print(f"An error occurred: {e}")
 
@@ -126,7 +171,8 @@ driver = webdriver.Edge()
 print("Navigating to Bing")
 driver.get("https://www.bing.com")  
 
-searchInput()
+searchInputUni()
+searchInputGames()
 
 # automatting the clicks on the rewards page
 print("Navigating to Microsoft Rewards")
