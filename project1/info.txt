@@ -24,3 +24,4 @@ WORDS TO SEARCH ON WEBPAGE
 "30 points >"
 
 there is a way to search for the text on the screen through selenium i forgot how
+

@@ -21,6 +21,7 @@ import os
 #     print(" ")
 #     print("uni_name", university['uni_name'])
 
+
 # will place into seperate file later on
 # bill microsoft has caught onto the universities being searched repeatedly now it doesn't generate points
 searchesUni = [
@@ -97,6 +98,7 @@ gamesSearches = [
 
 # same with this one
 RewardsPageElements = [
+    "Bing Homepage Quiz",
     "30 points >",
     "10 points>",
     "5 points >",
