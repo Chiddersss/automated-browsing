@@ -10,6 +10,7 @@ import os
 
 # thoughts -- https://www.w3schools.com/python/python_dictionaries.asp
 
+# region  reading json file
 # Load the searches.json file from the searches-db folder
 # json_file_path = os.path.join(os.path.dirname(__file__), 'searches-db', 'searches.json')
 # with open(json_file_path, 'r') as file:
@@ -21,9 +22,10 @@ import os
 #     print(" ")
 #     print("uni_name", university['uni_name'])
 
+#endregion
 
-# will place into seperate file later on
-# bill microsoft has caught onto the universities being searched repeatedly now it doesn't generate points
+
+# hidden because ugly -- will place into seperate file later on
 searchesUni = [
     "University of Aberdeen",
     "University of Edinburgh",
@@ -131,7 +133,7 @@ def searchInputUni():
             search_box.clear()
             search_box.send_keys(search)
             search_box.send_keys(Keys.RETURN)
-            time.sleep(5)
+           # time.sleep(5)
             search_box.send_keys(Keys.PAGE_DOWN)                     # `¯\_(ツ)_/¯`
             time.sleep(5)
         except Exception as e:
