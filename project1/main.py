@@ -190,5 +190,3 @@ rewardsPage()
         #         Convert now &gt;
         #     </span>
         # </div>
-
-#teset
