@@ -24,7 +24,6 @@ import os
 
 #endregion
 
-
 # hidden because ugly -- will place into seperate file later on
 searchesUni = [
     "University of Aberdeen",
@@ -150,7 +149,7 @@ def searchInputGames():
             search_box.clear()
             search_box.send_keys(search)
             search_box.send_keys(Keys.RETURN)
-            time.sleep(5)                               #if it goes too fast microsoft servers can't keep up
+            time.sleep(5)                               #if it goes too fast it can't keep up
             search_box.send_keys(Keys.PAGE_DOWN)                    
             time.sleep(5)
         except Exception as e:
