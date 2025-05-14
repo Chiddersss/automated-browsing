@@ -132,9 +132,9 @@ def searchInputUni():
             search_box.clear()
             search_box.send_keys(search)
             search_box.send_keys(Keys.RETURN)
-           # time.sleep(5)
-            search_box.send_keys(Keys.PAGE_DOWN)                     # `¯\_(ツ)_/¯`
             time.sleep(5)
+            search_box.send_keys(Keys.PAGE_DOWN)                     # `¯\_(ツ)_/¯`
+           # time.sleep(5)
         except Exception as e:
             print(f"An error occurred: {e}")
 
@@ -149,8 +149,10 @@ def searchInputGames():
             search_box.clear()
             search_box.send_keys(search)
             search_box.send_keys(Keys.RETURN)
-            time.sleep(5)                               #if it goes too fast it can't keep up
-            search_box.send_keys(Keys.PAGE_DOWN)                    
+           # time.sleep(5)                               #if it goes too fast it can't keep up
+            search_box.send_keys(Keys.PAGE_DOWN) 
+           # time.sleep(5)
+            search_box.send_keys(Keys.PAGE_UP)                    
             time.sleep(5)
         except Exception as e:
             print(f"An error occurred: {e}")
